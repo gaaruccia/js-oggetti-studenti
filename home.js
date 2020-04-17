@@ -19,8 +19,8 @@ var studenti = [
   }
 ];
 studenti.push({
-  "nome": nomeU,
-  "cognome": cognomeU,
+  "nome": nomeU.charAt(0).toUpperCase() + nomeU.slice(1),
+  "cognome": cognomeU.charAt(0).toUpperCase() + cognomeU.slice(1),
   "eta": etaU
 });
 for (var i = 0; i < studenti.length; i++){
@@ -29,5 +29,7 @@ for (var i = 0; i < studenti.length; i++){
   var cognomeStudente = oggettoI.cognome;
   var etaStudente = oggettoI.eta;
   console.log(nomeStudente + " " + cognomeStudente + " " + etaStudente);
+  $("#a").append(nomeStudente + " " + cognomeStudente + " " + etaStudente + " " )
   console.log(nomeStudente + " " + cognomeStudente);
+  $("#b").append(nomeStudente + " " + cognomeStudente + " ")
 }
